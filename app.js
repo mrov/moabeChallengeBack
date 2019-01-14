@@ -22,6 +22,7 @@ app.get('/products/:category', productController.findAllCategoryProducts);
 app.post('/products', productController.addProduct);
 app.delete('/products', productController.deleteProduct);
 
-app.listen(8080, function () {
+app.listen((process.env.PORT || 8080), function () {
   console.log('Example app listening on port 8080!');
 });
+
